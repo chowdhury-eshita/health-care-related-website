@@ -1,12 +1,15 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import logo from '../../../images/logo.png';
+import './Header.css';
 
 const Header = () => {
+    const { user, logOut } = useAuth();
     return (
         <div>
-            <Navbar className="text-white" collapseOnSelect expand="lg" sticky='top' bg="dark" variant="dark">
+            <Navbar fixed="top" className="text-white" collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand className="fw-bold" href="#home">
                         <img
@@ -19,14 +22,17 @@ const Header = () => {
                         Acme Health Care</Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Text>
-                        Signed in as: <a href="#login">Mark Otto</a>
+                        Signed in as: <a href="#login">{user?.displayName}</a>
                     </Navbar.Text>
                     <Navbar.Collapse className="justify-content-end">
-                        <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/doctors">Doctors</Nav.Link>
-                        <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-                        <Nav.Link as={Link} to="/about">About</Nav.Link>
-                        <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                        <Nav.Link className="nav" as={Link} to="/home">Home</Nav.Link>
+                        <Nav.Link className="nav" as={Link} to="/doctors">Doctors</Nav.Link>
+                        <Nav.Link className="nav" as={Link} to="/contact">Contact</Nav.Link>
+                        <Nav.Link className="nav" as={Link} to="/about">About</Nav.Link>
+                        {user?.email ?
+                            <Button onClick={logOut} variant="primary">Logout</Button> :
+                            <Nav.Link className="nav" as={Link} to="/login">Login</Nav.Link>
+                        }
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
