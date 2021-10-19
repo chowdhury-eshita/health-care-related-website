@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "testName": "Blood Osmolality",
+        "cost": 1000,
+        "description": "Normal results are: 275 to 295 mOsm/kg for adults and older adults. 275 to 290 mOsm/kg for children.",
+        "img": "https://healthjade.net/wp-content/uploads/2019/03/osmolality.jpg"
+    },
+    {
+        "id": 2,
+        "testName": "MRI",
+        "cost": 10000,
+        "description": "Magnetic resonance imaging (MRI) is a type of scan that uses strong magnetic fields and radio waves to produce detailed images of the inside of the body. An MRI scanner is a large tube that contains powerful magnets. You lie inside the tube during the scan.",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3x01IRJwLCTZ2LU1KLD8kcfoqSCwSqiQ9Cg&usqp=CAU"
+    },
+    {
+        "id": 3,
+        "testName": "Endoscopy",
+        "cost": 1500,
+        "description": "An endoscopy is a procedure where organs inside your body are looked at using an instrument called an endoscope. ",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU7OL93iukby_Y9LytKMPBfr3S7ObKUDv9yw&usqp=CAU"
+    },
+    {
+        "id": 4,
+        "testName": "X-Ray",
+        "cost": 600,
+        "description": "X-rays are a type of radiation called electromagnetic waves. X-ray imaging creates pictures of the inside of your body. The images show the parts of your body in different shades of black and white.",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSEmRDtHjPt99VP2dnyCBXUmc1T8zpsyeIHQ&usqp=CAU"
+    },
+    {
+        "id": 5,
+        "testName": "ECG",
+        "cost": 300,
+        "description": "An electrocardiogram (ECG) is a simple test that can be used to check your heart's rhythm and electrical activity. Sensors attached to the skin are used to detect the electrical signals produced by your heart each time it beats.",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDZn1aWmuwjhWzoxS3fdUqDjg2RsmLXjI5cA&usqp=CAU"
+    },
+    {
+        "id": 6,
+        "testName": "Ultrasonography",
+        "cost": 1200,
+        "description": "A procedure that uses high-energy sound waves to look at tissues and organs inside the body.",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeMAHlbdZrbhf0LSb33Mtddd0yzB1C-iRrBQ&usqp=CAU"
+    }
+]
