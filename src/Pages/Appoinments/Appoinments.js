@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Contact = () => {
+const Appoinments = () => {
     return (
         <>
             <h1 className="mt-5 text-center text-light bg-primary">Contact Us</h1>
@@ -17,4 +17,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default Appoinments;

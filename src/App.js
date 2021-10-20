@@ -6,17 +6,17 @@ import NotFound from './Pages/NotFound/NotFound';
 import Header from './Pages/Shared/Header/Header';
 import Footer from './Pages/Shared/Footer/Footer';
 import Doctors from './Pages/Doctors/Doctors/Doctors';
-import Contact from './Pages/Contact/Contact';
+import Appoinments from './Pages/Appoinments/Appoinments';
 import About from './Pages/About/About';
 import Login from './Pages/Login/Login/Login'
 import HealthDetails from './Pages/Home/Health/HealthDetails/HealthDetails';
 import AuthProvider from './contexts/AuthProvider';
-import Booking from './Pages/Booking/Booking/Booking';
+import ServiceDetails from './Pages/Booking/ServiceDetails/ServiceDetails';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <AuthProvider>
         <Router>
           <Header></Header>
@@ -30,8 +30,8 @@ function App() {
             <PrivateRoute path="/doctors">
               <Doctors></Doctors>
             </PrivateRoute>
-            <PrivateRoute path="/contact">
-              <Contact></Contact>
+            <PrivateRoute path="/appoinments">
+              <Appoinments></Appoinments>
             </PrivateRoute>
             <Route path="/about">
               <About></About>
@@ -42,8 +42,8 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-            <PrivateRoute path="/booking/:serviceId">
-              <Booking></Booking>
+            <PrivateRoute path="/servicedetails/:serviceId">
+              <ServiceDetails></ServiceDetails>
             </PrivateRoute>
             <Route path="*">
               <NotFound></NotFound>
