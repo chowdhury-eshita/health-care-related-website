@@ -1,13 +1,15 @@
-import { render } from '@testing-library/react';
 import React, { useState } from 'react';
-import { Button, Col, Form, InputGroup, Row } from 'react-bootstrap';
+import { Button, Col, Form, Row } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 
 
 
 const Appoinments = () => {
     const [validated, setValidated] = useState(false);
+    let history = useHistory();
 
     const handleSubmit = (event) => {
+        history.push("/successful");
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
             event.preventDefault();

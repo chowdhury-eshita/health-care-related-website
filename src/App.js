@@ -13,6 +13,7 @@ import HealthDetails from './Pages/Home/Health/HealthDetails/HealthDetails';
 import AuthProvider from './contexts/AuthProvider';
 import ServiceDetails from './Pages/Booking/ServiceDetails/ServiceDetails';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import Successful from './Pages/Successful/Successful';
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
             </Route>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/successful">
+              <Successful></Successful>
             </Route>
             <PrivateRoute path="/servicedetails/:serviceId">
               <ServiceDetails></ServiceDetails>

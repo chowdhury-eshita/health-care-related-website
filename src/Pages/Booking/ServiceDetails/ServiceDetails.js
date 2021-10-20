@@ -1,8 +1,14 @@
 import React from 'react';
 import { useParams } from 'react-router';
+import { useHistory } from 'react-router-dom';
 
 const ServiceDetails = () => {
     const { serviceId } = useParams();
+    let history = useHistory();
+
+    const handleClick = () => {
+        history.push("/successful");
+    }
     const data = [
         {
             "id": 1,
@@ -50,12 +56,12 @@ const ServiceDetails = () => {
     const item = data.find(items => items.id === parseInt(serviceId));
     return (
         <div>
-            <div className="w-50 text-center">
-                <h2>this is booking: {serviceId}</h2>
+            <div className="mt-5 pt-5 container text-center">
                 <img style={{ width: 600, height: 400 }} src={item.img} alt="" />
                 <h3>{item.testName}</h3>
                 <p className="text-center">{item.description}</p>
             </div>
+            <button onClick={handleClick} className="btn btn-success">Book test</button>
         </div>
     );
 };
