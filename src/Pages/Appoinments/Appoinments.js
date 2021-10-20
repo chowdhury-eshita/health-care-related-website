@@ -9,14 +9,13 @@ const Appoinments = () => {
     let history = useHistory();
 
     const handleSubmit = (event) => {
-        history.push("/successful");
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
         }
-
         setValidated(true);
+        history.push("/successful");
     };
 
     return (

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Service = ({ service }) => {
     const { id, testName, cost, description, img } = service;
     return (
-        <div className="text-center my-3 col-12 col-md-6 col-lg-4">
+        <div className="text-center my-3 col-sm-12 col-md-6 col-lg-4">
             <div className="card">
                 <img src={img} alt="" />
                 <h2>{testName}</h2>
