@@ -16,7 +16,7 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
-    <div className="">
+    <div className="App">
       <AuthProvider>
         <Router>
           <Header></Header>

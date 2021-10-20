@@ -49,7 +49,11 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     }
 
-    ///////////////////////////
+
+
+
+    ///Email password section///
+
     const handleRegister = e => {
         //form reloads the page by default to prevent default set e.preventDefault()
         e.preventDefault();
@@ -61,6 +65,7 @@ const useFirebase = () => {
 
     }
 
+    //email password login
     const processLogin = (email, password) => {
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
@@ -73,6 +78,7 @@ const useFirebase = () => {
             })
     }
 
+    //registration
     const registerNewUser = (email, password) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
